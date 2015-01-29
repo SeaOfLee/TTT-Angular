@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ttt2.css">
+  <script src="angular.min.js"></script>
+  <script src="ttt2.js"></script>
+  <title>T/T/T</title>
+</head>
+<body ng-app="ticTacApp">
+<div id="main">
+  <div ng-controller="ticTacCtrl">
+
+    <div id="container">
+      <div ng-repeat="row in board track by $index">
+        <div class="square" ng-repeat="cell in row track by $index" ng-click="makeMove($parent.$index, $index)">
+          {{ cell == "" ? "&nbsp;" : cell }}
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

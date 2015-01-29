@@ -1,0 +1,25 @@
+.cell {
+  border: 1px solid orange;
+  display: inline-block;
+}
+
+.selected {
+  background-color: lightgray;
+}
+
+#container {
+  width: 600px;
+  height: 600px;
+}
+
+.square {
+  border: 2px solid purple;
+  width: 190px;
+  height: 190px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#main #container{
+  margin: 0px auto;
+}
