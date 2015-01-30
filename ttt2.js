@@ -30,7 +30,7 @@ function checkWin() {
 
   $scope.makeChoice = function(row, column) {
     if(($scope.board[row][column] == "") && ($scope.turnNumber >=0)) {
-      var choice = ($scope.turnNum % 2) == 0 ? "X" : "O";
+      var choice = ($scope.turnNumber % 2) == 0 ? "X" : "O";
       $scope.board[row][column] = choice;
       $scope.turnNumber++;
       checkWin(choice);
