@@ -9,20 +9,32 @@ app.controller('ticTacCtrl', function($scope){
 function checkWin() {
   for(i = 0; i < 3; i++)
   // checks if horizontal rows are equal to each other and not equal to an empty string.
-  if($scope.board[i][0] == $scope.board[i][1] && $scope.board[i][2] == $scope.board[i][0] && $scope.board[i][0] !== ""){
-    console.log("win horizontal");
+  if($scope.board[i][0] == $scope.board[i][1] && $scope.board[i][2] == $scope.board[i][0] && $scope.board[i][0] !== "" && $scope.board[i][0] == "X"){
+    console.log("X win horizontal");
+  }
+  else if ($scope.board[i][0] == $scope.board[i][1] && $scope.board[i][2] == $scope.board[i][0] && $scope.board[i][0] !== "" && $scope.board[i][0] == "O"){
+    console.log("O win horizontal");
   }
   // checks if vertical columns are equal to each other and not equal to an empty string.
-  else if ($scope.board[0][i] == $scope.board[1][i] && $scope.board[2][i] == $scope.board[0][i] && $scope.board[0][i] !== "") {
-    console.log("win vertical");
+  else if ($scope.board[0][i] == $scope.board[1][i] && $scope.board[2][i] == $scope.board[0][i] && $scope.board[0][i] !== "" && $scope.board[0][i] == "X") {
+    console.log("X win vertical");
   }
+  else if ($scope.board[0][i] == $scope.board[1][i] && $scope.board[2][i] == $scope.board[0][i] && $scope.board[0][i] !== "" && $scope.board[0][i] == "O") {
+    console.log("O win vertical");
   // checks diagonal. only true when i = 0
-  else if ($scope.board[0][i] == $scope.board[1][i+1] && $scope.board[2][i +2] == $scope.board[0][i] && $scope.board[0][i] !== "") {
-    console.log("win diagonal right");
+  }
+  else if ($scope.board[0][i] == $scope.board[1][i+1] && $scope.board[2][i +2] == $scope.board[0][i] && $scope.board[0][i] !== "" && $scope.board[0][i] == "X") {
+    console.log("X win diagonal right");
+  }
+  else if ($scope.board[0][i] == $scope.board[1][i+1] && $scope.board[2][i +2] == $scope.board[0][i] && $scope.board[0][i] !== "" && $scope.board[0][i] == "O") {
+    console.log("O win diagonal right");
   }
   //checks left diagonal. only true when i = 2
-  else if ($scope.board[0][i] == $scope.board[1][i-1] && $scope.board[2][i-2] == $scope.board[0][i] && $scope.board[0][i] !== "") {
-    console.log("win diagonal left");
+  else if ($scope.board[0][i] == $scope.board[1][i-1] && $scope.board[2][i-2] == $scope.board[0][i] && $scope.board[0][i] !== "" && $scope.board[0][i] == "X") {
+    console.log("X win diagonal left");
+  }
+  else if ($scope.board[0][i] == $scope.board[1][i-1] && $scope.board[2][i-2] == $scope.board[0][i] && $scope.board[0][i] !== "" && $scope.board[0][i] == "O") {
+    console.log("O win diagonal left");
   }
   // if turnNumber reaches 9 there's been no winner, tie condition is enforced.
   else if ($scope.turnNumber == 9) {
