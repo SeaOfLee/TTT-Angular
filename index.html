@@ -12,7 +12,8 @@
 
     <div id="container">
       <div ng-repeat="row in board track by $index">
-        <div class="square" ng-repeat="cell in row track by $index" ng-click="makeMove($parent.$index, $index)">
+        <div class="square" id="row{{ $parent.$index}}column{{ $index }}"
+          ng-repeat="cell in row track by $index" ng-click="makeChoice($parent.$index, $index)">
           {{ cell == "" ? "&nbsp;" : cell }}
         </div>
       </div>

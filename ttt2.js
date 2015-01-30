@@ -5,8 +5,6 @@ app.controller('ticTacCtrl', function($scope){
 
   $scope.board = [["", "", ""], ["", "", ""], ["", "", ""]];
   
-  
-
 // function to check if win conditions are met, will run after every turn.
 function checkWin() {
   for(i = 0; i < 3; i++)
@@ -27,6 +25,19 @@ function checkWin() {
     console.log("win diagonal left");
   }
 }
+  // creates turnNumber property, will get incremented after every turn.
+  $scope.turnNumber = 0;
+
+  $scope.makeChoice = function(row, column) {
+    if(($scope.board[row][column] == "") && ($scope.turnNumber >=0)) {
+      var choice = ($scope.turnNum % 2) == 0 ? "X" : "O";
+      $scope.board[row][column] = choice;
+      $scope.turnNumber++;
+      checkWin(choice);
+    }
+    console.log($scope.board);
+
+  };
 
 });//end of controller
 
