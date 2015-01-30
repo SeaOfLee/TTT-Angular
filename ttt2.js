@@ -5,7 +5,7 @@ app.controller('ticTacCtrl', function($scope){
 
   $scope.board = [["", "", ""], ["", "", ""], ["", "", ""]];
   
-// function to check if win conditions are met, will run after every turn.
+// function to check if win conditions are met, will run after every turn. When winner is chosen p1/p2 win function is called.
 function checkWin() {
   for(i = 0; i < 3; i++)
   // checks if horizontal rows are equal to each other and not equal to an empty string.
@@ -84,6 +84,7 @@ function checkWin() {
   // function clearBoxes() {
   //   for(i = 0;)
   // }
+  
 
 });//end of controller
 

@@ -8,8 +8,8 @@
 }
 
 #container {
-  width: 600px;
-  height: 600px;
+  width: 465px;
+  height: 465px;
 }
 
 .square {
@@ -25,4 +25,7 @@
 
 #main #container{
   margin: 0px auto;
+}
+h1 {
+  text-align: center;
 }
