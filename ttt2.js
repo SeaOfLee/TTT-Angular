@@ -10,11 +10,11 @@ function checkWin() {
   for(i = 0; i < 3; i++)
   // checks if horizontal rows are equal to each other and not equal to an empty string.
   if($scope.board[i][0] == $scope.board[i][1] && $scope.board[i][2] == $scope.board[i][0] && $scope.board[i][0] !== ""){
-    console.log( choice + "win horizontal");
+    console.log("win horizontal");
   }
   // checks if vertical columns are equal to each other and not equal to an empty string.
   else if ($scope.board[0][i] == $scope.board[1][i] && $scope.board[2][i] == $scope.board[0][i] && $scope.board[0][i] !== "") {
-    console.log(choice + "win vertical");
+    console.log("win vertical");
   }
   // checks diagonal. only true when i = 0
   else if ($scope.board[0][i] == $scope.board[1][i+1] && $scope.board[2][i +2] == $scope.board[0][i] && $scope.board[0][i] !== "") {
@@ -23,6 +23,10 @@ function checkWin() {
   //checks left diagonal. only true when i = 2
   else if ($scope.board[0][i] == $scope.board[1][i-1] && $scope.board[2][i-2] == $scope.board[0][i] && $scope.board[0][i] !== "") {
     console.log("win diagonal left");
+  }
+  // if turnNumber reaches 9 there's been no winner, tie condition is enforced.
+  else if ($scope.turnNumber == 9) {
+    console.log("TIE");
   }
 }
   // creates turnNumber property, will get incremented after every turn.
