@@ -10,11 +10,11 @@ function checkWin() {
   for(i = 0; i < 3; i++)
   // checks if horizontal rows are equal to each other and not equal to an empty string.
   if($scope.board[i][0] == $scope.board[i][1] && $scope.board[i][2] == $scope.board[i][0] && $scope.board[i][0] !== ""){
-    console.log("win horizontal");
+    console.log( choice + "win horizontal");
   }
   // checks if vertical columns are equal to each other and not equal to an empty string.
   else if ($scope.board[0][i] == $scope.board[1][i] && $scope.board[2][i] == $scope.board[0][i] && $scope.board[0][i] !== "") {
-    console.log("win vertical");
+    console.log(choice + "win vertical");
   }
   // checks diagonal. only true when i = 0
   else if ($scope.board[0][i] == $scope.board[1][i+1] && $scope.board[2][i +2] == $scope.board[0][i] && $scope.board[0][i] !== "") {

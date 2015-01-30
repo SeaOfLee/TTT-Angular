@@ -13,13 +13,14 @@
 }
 
 .square {
-  border: 2px solid black;
-  width: 190px;
-  height: 190px;
+  width: 150px;
+  height: 150px;
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 30px;
   color: black;
+  background-color: #33CCFF;
+  margin: 1px;
 }
 
 #main #container{
